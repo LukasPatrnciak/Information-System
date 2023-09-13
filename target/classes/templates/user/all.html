@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>:: Informačný Systém :: Úspešne pridaný používateľ</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset='UTF-8'>
+    <meta http-equiv="refresh" content="5;url=/">
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class='contentBgS'>
+    <div class='contentBgShadow'>
+        <!-- Navigation Bar -->
+        <div class='navigation'>
+            <div class='container'>
+                <div class='navigationLogo'>
+                    <h1><a href="/">: : I S</a></h1>
+                </div>
+                <div class='navigationMenu'>
+                    <ul>
+                        <li>
+                            <a href="/">Domovská stránka</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href=''>Používateľ</a>
+                            <div class='dropdownContent'>
+                                <p><a href="add">Pridať používateľa</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class='headerS'>
+            <div class='container'>
+                <div class='headerContainerS'>
+                    <p>Pridanie používateľa</p>
+                    <p>Používateľ bol úspešne pridaný do informačného systému. Nižšie sa zobrazuje tabuľka aktuálne pridaných používateľov</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='content'>
+    <div class='container'>
+        <div class='contentCenter'>
+            <div class="users">
+                <h2>Zoznam všetkých používateľov systému</h2>
+                <table>
+                    <tr>
+                        <th style="width: 200px;"><p style="text-align: left; font-size: 20px;">ID</p></th>
+                        <th style="width: 400px;"><p style="text-align: left; font-size: 20px;">Meno</p></th>
+                        <th style="width: 500px;"><p style="text-align: left; font-size: 20px;">Priezvisko</p></th>
+                        <th style="width: 500px;"><p style="text-align: left; font-size: 20px;">E-mail</p></th>
+                    </tr>
+                    <tr>
+                    <tr th:each="user: ${users.values()}">
+                        <td style="width: 200px;">
+                            <a th:href="@{'/user/id/' + ${user.userId}}" th:text="${user.userId}"></a>
+                        </td>
+                        <td style="width: 400px;">
+                            <a th:href="@{'/user/id/' + ${user.userId}}" th:text="${user.name}"></a>
+                        </td>
+                        <td style="width: 200px;">
+                            <a th:href="@{'/user/id/' + ${user.userId}}" th:text="${user.surname}"></a>
+                        </td>
+                        <td style="width: 400px;">
+                            <a th:href="@{'/user/id/' + ${user.userId}}" th:text="${user.email}"></a>
+                        </td>
+                    </tr>
+                </table>
+                <h2><a href="/">O 5 sekund budete presmerovaný na domovskú stránku</a></h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='footer'>
+    <div class='container'>
+        <div class="footerContentLeft">
+            <p>&copy; 2020 | Informačný Systém</p>
+        </div>
+        <div class="footerContentRight">
+            <p>Vytvoril: <strong><a href='https://is.stuba.sk/auth/lide/clovek.pl?id=92320'>Lukáš Patrnčiak</a></strong> (AIS ID: 92320)</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

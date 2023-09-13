@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>:: Informačný Systém :: Používateľ :: Pridanie používateľa</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset='UTF-8'>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class='contentBgS'>
+    <div class='contentBgShadow'>
+        <!-- Navigation Bar -->
+        <div class='navigation'>
+            <div class='container'>
+                <div class='navigationLogo'>
+                    <h1><a href="/">: : I S</a></h1>
+                </div>
+                <div class='navigationMenu'>
+                    <ul>
+                        <li>
+                            <a href="/">Domovská stránka</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href=''>Používateľ</a>
+                            <div class='dropdownContent'>
+                                <p><a href="add">Pridať používateľa</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class='headerS'>
+            <div class='container'>
+                <div class='headerContainerS'>
+                    <p>Pridanie používateľa</p>
+                    <p>Na tejto stránke je možné pridať nového používateľa do informačného systému</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='content'>
+    <div class='container'>
+        <div class='contentCenter'>
+            <div class="userAdministration">
+                <h2>Pridať používateľa do informačného systému</h2>
+                <form action="#" class="formClassUser" th:action="@{/user/add}" th:object="${user}" method="post">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="name">Meno: </label>
+                            </td>
+                            <td>
+                                <input id="name" type="text" placeholder="Meno používateľa" th:field="*{name}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="surname">Priezvisko </label>
+                            </td>
+                            <td>
+                                <input id="surname" placeholder="Priezvisko používateľa" type="text" th:field="*{surname}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="identificationNumber">Rodné číslo: </label>
+                            </td>
+                            <td>
+                                <input id="identificationNumber" type="text" placeholder="Rodné číslo" th:field="*{identificationNumber}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">E-mail: </label>
+                            </td>
+                            <td>
+                                <input id="email" type="text" placeholder="E-mail používateľa" th:field="*{email}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Adresa doručenia</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="deliveryCity">Mesto: </label>
+                            </td>
+                            <td>
+                                <input id="deliveryCity" type="text" placeholder="Mesto" th:field="*{cityDelivery}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="deliveryStreet">Ulica: </label>
+                            </td>
+                            <td>
+                                <input id="deliveryStreet" type="text" placeholder="Ulica" th:field="*{streetDelivery}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="deliveryHouseNumber">Číslo domu: </label>
+                            </td>
+                            <td>
+                                <input id="deliveryHouseNumber" type="text" placeholder="Číslo domu" th:field="*{houseNumberDelivery}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="deliveryPostalCode">PSČ: </label>
+                            </td>
+                            <td>
+                                <input id="deliveryPostalCode" type="text" placeholder="PSČ" th:field="*{postalCodeDelivery}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Korešpondenčná adresa</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="correspondenceCity">Mesto: </label>
+                            </td>
+                            <td>
+                                <input id="correspondenceCity" type="text" placeholder="Mesto" th:field="*{cityCorrespondence}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="correspondenceStreet">Ulica: </label>
+                            </td>
+                            <td>
+                                <input id="correspondenceStreet" type="text" placeholder="Ulica" th:field="*{streetCorrespondence}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="correspondenceHouseNumber">Číslo domu: </label>
+                            </td>
+                            <td>
+                                <input id="correspondenceHouseNumber" type="text" placeholder="Číslo domu" th:field="*{houseNumberCorrespondence}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="correspondencePostalCode">PSČ: </label>
+                            </td>
+                            <td>
+                                <input id="correspondencePostalCode" type="text" placeholder="PSČ" th:field="*{postalCodeDCorrespondence}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br><br>
+                            </td>
+                            <td>
+                                <input id="addNewUser" type="submit" value="Pridať používateľa">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='footer'>
+    <div class='container'>
+        <div class="footerContentLeft">
+            <p>&copy; 2020 | Informačný Systém</p>
+        </div>
+        <div class="footerContentRight">
+            <p>Vytvoril: <strong><a href='https://is.stuba.sk/auth/lide/clovek.pl?id=92320'>Lukáš Patrnčiak</a></strong> (AIS ID: 92320)</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

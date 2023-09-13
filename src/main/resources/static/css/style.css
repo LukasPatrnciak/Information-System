@@ -1,0 +1,304 @@
+/*  L U K A S  P A T R N C I A K
+ *  AIS ID: 92320
+
+ * General Settings
+ */
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: #e4e671;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h2, h3, h4, h5 {
+    color: #3f3f3f;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: "Courier New", Courier, monospace;
+}
+
+input {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    text-transform: none;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 2px solid #000000;
+    background-color: #000000;
+}
+
+input[type=submit]:hover {
+    background-color: #e4e671;
+    color: #ffffff;
+    border: 2px solid #e4e671;
+}
+
+textarea {
+    background-color: #ffffff;
+    font-size: 15px;
+    border: 2px solid #000000;
+    text-transform: uppercase;
+}
+
+li[name=boldText] {
+    font-weight: bold;
+}
+
+li[name=normalText]{
+    font-weight: normal;
+}
+
+.navigation {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    width: 100%;
+    height: 70px;
+    line-height: 17px;
+}
+
+.navigationLogo {
+    position: absolute;
+    left: 0;
+}
+
+.navigationLogo h1 {
+    font-size: 40px;
+}
+
+.navigationLogo a {
+    color: brown;
+}
+
+.navigationMenu {
+    position: absolute;
+    text-decoration: none;
+    padding-top: 12px;
+    height: 60px;
+    right: 0;
+}
+
+.navigationMenu ul {
+    list-style: none;
+}
+
+.navigationMenu li {
+    display: inline-block;
+    margin-right: 35px;
+}
+
+.navigationMenu li a {
+    text-transform: uppercase;
+    color: #e4e671;
+}
+
+.navigationMenu li a:hover {
+    font-weight: bold;
+}
+
+.dropdown:hover .dropdownContent { /* Ked sa namieri kurzorom na button (cele div), aby sa obsah zobrazil po namiereni, kedze normalne je zakazany */
+    display: block;
+    text-align: left;
+}
+
+.dropdownContent {
+    position: absolute; /* aby sa button nepohyboval pri nabehnuti kurzoru */
+    display: none;
+    z-index: 1;
+    padding-top: 5px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdownContent a {
+    padding-left: 14px;
+}
+
+.dropdown:hover .dropdownContentP { /* Ked sa namieri kurzorom na button (cele div), aby sa obsah zobrazil po namiereni, kedze normalne je zakazany */
+    display: block;
+    text-align: left;
+}
+
+.dropdownContentP {
+    position: absolute; /* aby sa button nepohyboval pri nabehnuti kurzoru */
+    display: none;
+    z-index: 1;
+    padding-top: 5px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdownContentP a {
+    padding-left: 15px;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    width: 75%;
+}
+
+.contentBg {
+    background: url('../img/background.jpeg') no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.contentBgShadow {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.header {
+    height: 650px;
+}
+
+.headerContainer {
+    position: relative;
+    width: 400px;
+    text-align: left;
+    padding-top: 200px;
+}
+
+.headerContainer p {
+    color: #ffffff;
+}
+
+.contentBgS {
+    background-color: #3f3f3f;
+    z-index: 0;
+}
+
+.headerS {
+    height: 300px;
+}
+
+.headerContainerS {
+    position: relative;
+    width: 400px;
+    text-align: left;
+    padding-top: 120px;
+}
+
+.headerContainerS p {
+    color: #ffffff;
+}
+
+.content {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.contentCenter {
+    position: relative;
+}
+
+.users {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.users h2 {
+    text-align: center;
+}
+
+.users a {
+    font-size: 17px;
+    color: #a52a2a;
+}
+
+.userAdministration {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.userAdministration h2 {
+    text-align: center;
+}
+
+.userAdministration ul {
+    list-style: none;
+    left: 0;
+}
+
+.userAdministration li {
+    margin-top: 10px;
+}
+
+.userAdministration a {
+    font-size: 17px;
+    color: brown;
+}
+
+.formClassUser {
+    width: 700px;
+}
+
+.formClassUser input {
+    height: 40px;
+    width: 250px;
+    margin-left: 100px;
+}
+
+.formClassUser p[class=pTable] {
+    margin-left: 100px;
+}
+
+.formClassUser a[class=aTable] {
+    margin-left: 60px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+    bottom: 0;
+}
+
+.footerContentLeft {
+    position: absolute;
+    left: 0;
+}
+
+.footerContentRight {
+    position: absolute;
+    right: 0;
+}
+
+.footer p {
+    padding-top: 15px;
+    color: white;
+}
+
+.footer a {
+    color: #e4e671;
+}

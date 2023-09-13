@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>:: Informačný Systém :: Používateľ :: Zmena údajov používateľa</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset='UTF-8'>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class='contentBgS'>
+    <div class='contentBgShadow'>
+        <!-- Navigation Bar -->
+        <div class='navigation'>
+            <div class='container'>
+                <div class='navigationLogo'>
+                    <h1><a href="">: : I S</a></h1>
+                </div>
+                <div class='navigationMenu'>
+                    <ul>
+                        <li>
+                            <a href="/">Domovská stránka</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href=''>Používateľ</a>
+                            <div class='dropdownContent'>
+                                <p><a href="add">Pridať používateľa</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class='headerS'>
+            <div class='container'>
+                <div class='headerContainerS'>
+                    <p>Zmena údajov používateľa</p>
+                    <p>Na tejto stránke je možné zmeniť údaje používateľa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='content'>
+    <div class='container'>
+        <div class='contentCenter'>
+            <div class="userAdministration">
+                <h2>Zmena údajov používateľa</h2>
+                    <form action="#" class="formClassUser" th:action="@{user.userId}" th:object="${user}" method="post">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="name">ID: </label>
+                                </td>
+                                <td>
+                                    <p th:text="${user.userId}"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="name">Meno: </label>
+                                </td>
+                                <td>
+                                    <input id="name" type="text" placeholder="Meno používateľa" th:field="*{name}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="surname">Priezvisko </label>
+                                </td>
+                                <td>
+                                    <input id="surname" placeholder="Priezvisko používateľa" type="text" th:field="*{surname}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="name">Rodné číslo: </label>
+                                </td>
+                                <td>
+                                    <p th:text="${user.identificationNumber}"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email">E-mail: </label>
+                                </td>
+                                <td>
+                                    <input id="email" type="text" placeholder="E-mail používateľa" th:field="*{email}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br><br>
+                                </td>
+                                <td>
+                                    <input id="editUser" type="submit" value="Zmeniť údaje používateľa">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='footer'>
+    <div class='container'>
+        <div class="footerContentLeft">
+            <p>&copy; 2020 | Informačný Systém</p>
+        </div>
+        <div class="footerContentRight">
+            <p>Vytvoril: <strong><a href='https://is.stuba.sk/auth/lide/clovek.pl?id=92320'>Lukáš Patrnčiak</a></strong> (AIS ID: 92320)</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

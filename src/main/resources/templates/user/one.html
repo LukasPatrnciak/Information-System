@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>:: Informačný Systém :: Používateľ :: Detail používateľa</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset='UTF-8'>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class='contentBgS'>
+    <div class='contentBgShadow'>
+        <!-- Navigation Bar -->
+        <div class='navigation'>
+            <div class='container'>
+                <div class='navigationLogo'>
+                    <h1><a href="/">: : I S</a></h1>
+                </div>
+                <div class='navigationMenu'>
+                    <ul>
+                        <li>
+                            <a href="/">Domovská stránka</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class='headerS'>
+            <div class='container'>
+                <div class='headerContainerS'>
+                    <p>Detail používateľa</p>
+                    <p>Na tejto stránke sa zobrazujú všetky dostupné detaily zvoleného používateľa</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='content'>
+    <div class='container'>
+        <div class='contentCenter'>
+            <div class="userAdministration">
+                <h2>Detail používateľa / <a th:href="@{'/user/edit/' + ${user.userId}}">Zmena údajov</a></h2>
+                <ul>
+                    <li><b>ID:</b> <p th:text="${user.userId}"></p></li>
+                    <li><b>Meno:</b> <p th:text="${user.name}"></p></li>
+                    <li><b>Priezvisko:</b> <p th:text="${user.surname}"></p></li>
+                    <li><b>E-mail:</b> <p th:text="${user.email}"></p></li>
+                    <li><b>Rodné číslo:</b> <p th:text="${user.identificationNumber}"></p></li>
+                    <li><b>Adresa doručenia:</b> <p th:text="${user.deliveryAddress}"></p></li>
+                    <li><b>Korešpondenčná adresa:</b> <p th:text="${user.correspondenceAddress}"></p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='footer'>
+    <div class='container'>
+        <div class="footerContentLeft">
+            <p>&copy; 2020 | Informačný Systém</p>
+        </div>
+        <div class="footerContentRight">
+            <p>Vytvoril: <strong><a href='https://is.stuba.sk/auth/lide/clovek.pl?id=92320'>Lukáš Patrnčiak</a></strong> (AIS ID: 92320)</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
